@@ -18,6 +18,12 @@ whoami
 Purpose: Displays your current Linux username.
 
 ### 2. Connect your Alchemy RPC endpoint
+best code to avoid paste issues: 
+--------------------------------------------------------------
+'''bash
+read -r -p "Paste your Alchemy RPC URL here: " ETH_RPC_URL
+'''
+--------------------------------------------------------------
 ```bash
 read -rsp "Enter Ethereum RPC URL: " ETH_RPC_URL
 echo
