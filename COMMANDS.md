@@ -198,3 +198,64 @@ Understanding is more important than memorisation.
 **Repository:** web3-testing-laboratory  
 **Command reference:** COMMANDS.md  
 **Edition:** 001
+
+__________________________________________________________________
+## Inspecting Blockchain Transactions with Foundry
+
+### Command
+
+```bash
+cast tx <TRANSACTION_HASH> --rpc-url <RPC_URL>
+```
+
+### Example
+
+```bash
+cast tx 0x14fb0ede221d83b5e44537834514f42dd61f1cc7c91f9ddd610212642d150ff5 --rpc-url http://172.23.164.1:8545
+```
+
+### Purpose
+
+Retrieves the details of a transaction from the blockchain node.
+
+### Command breakdown
+
+- `cast`: Foundry command-line blockchain interaction tool.
+- `tx`: Requests transaction details.
+- `<TRANSACTION_HASH>`: Unique identifier of the transaction.
+- `--rpc-url`: Specifies the RPC endpoint of the blockchain node.
+- `<RPC_URL>`: Address of the node being queried.
+
+### Important transaction fields
+
+| Field | Explanation |
+|---|---|
+| `hash` | Unique transaction identifier |
+| `blockNumber` | Block containing the transaction |
+| `from` | Sender address |
+| `to` | Recipient address |
+| `value` | Transferred amount in Wei |
+| `gasLimit` | Maximum gas allocated |
+| `effectiveGasPrice` | Actual gas price per unit of gas |
+| `nonce` | Sender's transaction sequence number |
+| `chainId` | Identifies the blockchain network |
+| `type` | Transaction format |
+
+### Related command: Inspect transaction receipt
+
+```bash
+cast receipt <TRANSACTION_HASH> --rpc-url <RPC_URL>
+```
+
+The receipt provides execution information, including transaction status and actual gas used.
+
+### Practical example
+
+Transferred 50 ETH from Account 1 to Account 2 on Samuel Private Learning Chain.
+
+- Chain ID: `2026110401`
+- Block number: `26345408`
+- Transaction type: `2`
+- Initial sender nonce: `0`
+
+**Learning note:** Ethereum represents ETH amounts in Wei. One ETH equals 10^18 Wei.
