@@ -20,13 +20,15 @@ Purpose: Displays your current Linux username.
 ### 2. Connect your Alchemy RPC endpoint
 best code to avoid paste issues: 
 --------------------------------------------------------------
-'''bash
+
 read -r -p "Paste your Alchemy RPC URL here: " ETH_RPC_URL
-'''
+
 --------------------------------------------------------------
 ```bash
+read -r -p "Paste your Alchemy RPC URL here: " ETH_RPC_URL
+
 read -rsp "Enter Ethereum RPC URL: " ETH_RPC_URL
-echo
+ech0
 export ETH_RPC_URL
 ```
 Purpose: Securely enters the RPC URL and stores it in a temporary environment variable.
